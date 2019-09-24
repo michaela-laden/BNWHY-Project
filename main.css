@@ -1,0 +1,49 @@
+
+
+
+.bgimage {
+    width:100%;
+    background: url('imgs/jumbo-image.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    background-attachment: fixed;
+    padding-top: 60px;    
+  }
+.bgimage h1 {
+    font-family: 'Abel', sans-serif;
+    font-size: 100px;
+    padding-top: 30%;
+    color: #D2B55B;
+    letter-spacing: 15px;
+
+}
+
+.bgimage h3{
+    color:white;
+    font-family: 'Abel', sans-serif;
+    letter-spacing:3px;
+}
+
+.bgimage p{
+    font-size: 17px; 
+}
+
+  .container-fluid{
+    background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url("jumbo-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    height: 900px;
+}
+
+#galleryk p{
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 100%;
+    
+}
