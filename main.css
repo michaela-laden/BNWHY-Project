@@ -28,7 +28,7 @@
 .bgimage p{
     font-size: 17px; 
 }
-
+ 
   .container-fluid{
     background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url("jumbo-image.jpg");
     background-repeat: no-repeat;
