@@ -5,7 +5,7 @@
     width:100%;
     background: url('imgs/jumbo-image.jpg');
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center center;
     background-size:cover;
     background-attachment: fixed;
     padding-top: 60px;    
