@@ -9,7 +9,9 @@
     background-size:cover;
     background-attachment: fixed;
     padding-top: 60px;    
+    height: 100%;
   }
+
 .bgimage h1 {
     font-family: 'Abel', sans-serif;
     font-size: 100px;
