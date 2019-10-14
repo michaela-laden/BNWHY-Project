@@ -1,43 +1,26 @@
 
+@font-face{
+    font-family: Scala;
+    src: url(scala-bold.ttf);
+}
+.hero {
+    background-image: linear-gradient(rgba(0,0,0, 0.4), rgba(0,0,0,0.6)), url("imgs/rsz_1jumbo-image.jpg");
+    /* background-image: linear-gradient(rgba(75, 38, 1, 0.6), rgba(119, 75, 31, 0.2)), url("imgs/rsz_1jumbo-image.jpg"); */
+    height: 100vh;
+    background-size: cover; 
+}
 
-
-.bgimage {
-    width:100%;
-    background: url('imgs/jumbo-image.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size:cover;
-    background-attachment: fixed;
-    padding-top: 60px;    
-  }
-
-.bgimage h1 {
-    font-family: 'Abel', sans-serif;
-    font-size: 100px;
-    padding-top: 30%;
-    color: #D2B55B;
+section h1{
+    font-family: Scala;
+    text-transform: uppercase; 
+    font-size: 7rem; 
+    color: #ab8d3f;
+    text-align: center; 
+    text-shadow: 2px 2px 1px #000;
+    padding-top: 45vh;
     letter-spacing: 15px;
-
 }
 
-.bgimage h3{
-    color:white;
-    font-family: 'Abel', sans-serif;
-    letter-spacing:3px;
-}
-
-.bgimage p{
-    font-size: 17px; 
-}
- 
-  .container-fluid{
-    background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url("jumbo-image.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    color: #fff;
-    height: 900px;
-}
 
 #galleryk p{
     color: white;
@@ -48,3 +31,4 @@
     width: 100%;
     
 }
+
