@@ -15,8 +15,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from rest_framework import routers
+from bnwhy.api import views
+
+router = routers.DefaultRouter()
+router.register(r'users', views.UserViewSet)
+router.register(r'groups', views.GroupViewSet)
 
 urlpatterns = [
-    path('', include('frontend.urls')),
+    # Front end Routes
+    path('', include('bnwhy.frontend.urls')),
+
+    # Admin Interface
     path('admin/', admin.site.urls),
+
+    # API Routes
+    path('api/v1/', include(router.urls)),
+    path('api/v1/auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
