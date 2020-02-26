@@ -1,6 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import View
-
+from django.views.generic import ListView
 
 posts = [
     {'author' : 'Michaela', 
@@ -13,6 +12,8 @@ posts = [
 
 def index(request):
     return render(request, 'index.html',{})
+
+
 
 def alteryx(request):
     context = {

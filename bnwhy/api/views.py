@@ -4,6 +4,8 @@ from rest_framework import viewsets
 from .serializers import UserSerializer, GroupSerializer, PostSerializer
 from .models import Post
 
+
+
 class UserViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows users to be viewed or edited.
@@ -27,3 +29,5 @@ class PostViewSet(viewsets.ModelViewSet):
     """
     queryset = Post.objects.all()
     serializer_class = PostSerializer
+
+   
