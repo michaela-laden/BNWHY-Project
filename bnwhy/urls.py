@@ -17,6 +17,9 @@ from django.contrib import admin
 from django.urls import include, path
 from rest_framework import routers
 from bnwhy.api import views
+from django.contrib.auth import views as auth_views
+from users import views as user_views
+
 
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
@@ -29,6 +32,9 @@ urlpatterns = [
 
     # Admin Interface
     path('admin/', admin.site.urls),
+
+    #Registration 
+    path('register/', user_views.register, name='register'),
 
     # API Routes
     path('api/v1/', include(router.urls)),

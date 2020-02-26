@@ -52,15 +52,14 @@
         </nav>
         <!-- <div id="particles-js"></div> -->
         <main role="main" class="container" style="padding-top: 10%; position: relative;">
-            
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-"></div>
+                {% endfor %}
+            {% endif %}
             {% block content %}{% endblock %} 
           
         </main>
-        
-        
-
-        
-       
         </body>
 <!--Bootstrap - jquery, popper.js, bootstrap js-->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
