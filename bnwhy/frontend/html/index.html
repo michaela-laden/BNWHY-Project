@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -42,6 +44,25 @@
                         <a class="nav-link" href="#">Blue Prism</a>
                     </li>
                 </ul>
+                {% if user.is_authenticated %}
+                <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'profile' %}"><span class="fas fa-sign-in-alt"></span> Profile</a>
+                </li>    
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'logout' %}"><span class="fas fa-sign-in-alt"></span> Logout</a>
+                  </li>
+                </ul>
+                {% else %}
+                <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'register' %}"><span class="fas fa-user"></span> Sign Up</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'login' %}"><span class="fas fa-sign-in-alt"></span> Login</a>
+                </li>
+              </ul>
+              {% endif %}
             </div>
             </nav>
 

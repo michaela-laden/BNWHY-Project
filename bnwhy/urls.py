@@ -36,6 +36,15 @@ urlpatterns = [
     #Registration 
     path('register/', user_views.register, name='register'),
 
+    #Profile
+    path('profile/', user_views.profile, name='profile'),
+
+    #Login
+    path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
+
+    #Logout
+    path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
+
     # API Routes
     path('api/v1/', include(router.urls)),
     path('api/v1/auth/', include('rest_framework.urls', namespace='rest_framework'))
