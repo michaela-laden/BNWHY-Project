@@ -19,6 +19,8 @@ from rest_framework import routers
 from bnwhy.api import views
 from django.contrib.auth import views as auth_views
 from users import views as user_views
+from django.conf import settings
+from django.conf.urls.static import static
 
 
 router = routers.DefaultRouter()
@@ -49,3 +51,6 @@ urlpatterns = [
     path('api/v1/', include(router.urls)),
     path('api/v1/auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
+
+if settings.DEBUG: 
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
