@@ -1,22 +1,12 @@
 from django.shortcuts import render
 from django.views.generic import ListView
-
-posts = [
-    {'author' : 'Michaela', 
-     'title' : 'Question 1', 
-     'content' : 'first post',
-     'date': 'January 1, 2020'
-    }
-]
-
+from bnwhy.api.models import Post
 
 def index(request):
     return render(request, 'index.html',{})
 
-
-
 def alteryx(request):
     context = {
-        'posts' : posts
+        'posts' : Post.objects.all()
     }
     return render(request, 'Alteryx.html',context)
