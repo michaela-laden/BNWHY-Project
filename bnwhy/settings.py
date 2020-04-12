@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'bnwhy.frontend',
     'users.apps.UsersConfig',
     'crispy_forms',
     'django.contrib.admin',

@@ -20,6 +20,3 @@ def alteryx(request):
         'posts' : posts
     }
     return render(request, 'Alteryx.html',context)
-
-    
-
