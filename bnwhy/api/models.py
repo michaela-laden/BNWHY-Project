@@ -1,10 +1,9 @@
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
+from django.urls import reverse
 
-# user=User.objects.create_user('john', 'lennon@thebeatles.com', 'johnpassword')
-# user.last_name = 'Lennon'
-# user.save()
+
 
 class Post(models.Model):
     title = models.CharField(max_length = 100)
@@ -15,3 +14,5 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
+    def get_absolute_url(self):
+        return reverse('posts-detail', kwargs={'pk':self.pk})

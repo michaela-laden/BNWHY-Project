@@ -57,6 +57,7 @@
                         <a class="nav-link" href="{% url 'logout' %}"><span class="fas fa-sign-in-alt"></span> Logout</a>
                     </li>
                 </ul>
+                
             {% else %}
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item">
@@ -69,7 +70,6 @@
           {% endif %}
         </div>
         </nav>
-        <!-- <div id="particles-js"></div> -->
         <main role="main" class="container" style="padding-top: 10%; position: relative;">
             {% if messages %}
                 {% for message in messages %}
