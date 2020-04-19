@@ -1,6 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-from bnwhy.api.models import Post
+from bnwhy.api.models import Post, Comment
 from django.template import loader
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.models import User
@@ -45,6 +45,22 @@ class PostCreateView(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
+
+
+class CommentCreateView(LoginRequiredMixin, CreateView):
+    model = Comment
+    template_name ='comment_form.html'
+    fields = ['text']
+
+    def form_valid(self, form):
+        post_id = self.kwargs.get('pk')
+        form.instance.post_id = post_id
+        form.instance.author = self.request.user
+        return super().form_valid(form)
+    
+    def get_success_url(self):
+        return reverse('posts-detail', kwargs={'pk':self.object.post_id})
+
 
 class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Post

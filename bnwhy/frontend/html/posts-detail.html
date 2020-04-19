@@ -18,6 +18,8 @@
                 <p class="article-content">{{ object.content }}</p>
             </div>
         </article>
+    </br>
+        <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'comments-detail' object.id %}">Add a comment</a>
         <hr>
         {% for comment in post.comments.all %}
             <div class="comment">
