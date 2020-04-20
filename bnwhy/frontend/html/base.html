@@ -10,6 +10,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{% static 'css/forum.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     {% if title %}
         <title>BNWHY - {{title}}</title>
     {% else %}
@@ -48,6 +50,7 @@
                     <a class="nav-link" href="#">Blue Prism</a>
                 </li>
             </ul>
+
             {% if user.is_authenticated %}
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item">
@@ -70,6 +73,7 @@
           {% endif %}
         </div>
         </nav>
+    </br>
         <main role="main" class="container" style="padding-top: 5%; position: relative;">
             {% if messages %}
                 {% for message in messages %}
@@ -80,7 +84,12 @@
             {% endif %}
             {% block content %}{% endblock %} 
         </main>
-        </body>
+        </br></br>
+        <br><br>
+        <footer id="footer">
+            ·B·N·WHY·
+        </footer>    
+    </body>
 <!--Bootstrap - jquery, popper.js, bootstrap js-->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

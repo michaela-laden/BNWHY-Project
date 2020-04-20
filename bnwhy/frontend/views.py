@@ -10,12 +10,6 @@ def index(request):
     return render(request, 'index.html',{})
 
 
-def alteryx(request):
-    context = {
-        'posts' : Post.objects.all()
-    }
-    return render(request, 'Alteryx.html',context)
-
 class PostListView(ListView):
     model = Post
     template_name = 'Alteryx.html'
