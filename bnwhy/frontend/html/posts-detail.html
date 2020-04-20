@@ -18,18 +18,20 @@
                 <p class="article-content">{{ object.content }}</p>
             </div>
         </article>
-    </br>
-        <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'comments-detail' object.id %}">Add a comment</a>
         <hr>
+        <div class="content" style="   background: #ffffff; padding: 10px 20px; border: 2px solid #ab8d3f; border-radius: 3px; margin-left:5%">
+        <!-- <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'comments-detail' object.id %}">Add a comment</a> -->
+        <h3>Comments <a class="btn btn-outline-info btn-sm" href="{% url 'comments-detail' pk=post.pk %}">Add a comment!</a></h3></br>
         {% for comment in post.comments.all %}
             <div class="comment">
-                <div class="date">{{ comment.date_posted }}</div>
+                <div class="date">{{ comment.date_posted | date:"F d, Y" }}</div>
                 <strong>{{ comment.author }}</strong>
                 <p>{{ comment.text|linebreaks }}</p>
             </div>
+            <hr>
         {% empty %}
             <p>No comments :(</p>
         {% endfor %}
-
+            </div>
     {% endblock content %}
     
