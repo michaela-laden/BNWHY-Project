@@ -10,15 +10,60 @@ def index(request):
     return render(request, 'index.html',{})
 
 
-class PostListView(ListView):
+class AlteryxListView(ListView):
     model = Post
     template_name = 'Alteryx.html'
     context_object_name = 'posts'
-    ordering = ['-date_posted']
     paginate_by = 5
 
-    # def get_queryset(self):
-    #     return Post.objects.filter(category_id=self.kwargs.get('name')).order_by('-date_posted')
+    def get_queryset(self):
+        return Post.objects.filter(category_id=1).order_by('-date_posted')
+
+class SQLListView(ListView):
+    model = Post
+    template_name = 'Alteryx.html'
+    context_object_name = 'posts'
+    paginate_by = 5
+
+    def get_queryset(self):
+        return Post.objects.filter(category_id=2).order_by('-date_posted')
+
+class ShareListView(ListView):
+    model = Post
+    template_name = 'Alteryx.html'
+    context_object_name = 'posts'
+    paginate_by = 5
+
+    def get_queryset(self):
+        return Post.objects.filter(category_id=3).order_by('-date_posted')
+
+class PythonListView(ListView):
+    model = Post
+    template_name = 'Alteryx.html'
+    context_object_name = 'posts'
+    paginate_by = 5
+
+    def get_queryset(self):
+        return Post.objects.filter(category_id=4).order_by('-date_posted')
+
+
+class OCRListView(ListView):
+    model = Post
+    template_name = 'Alteryx.html'
+    context_object_name = 'posts'
+    paginate_by = 5
+
+    def get_queryset(self):
+        return Post.objects.filter(category_id=5).order_by('-date_posted')
+
+class BlueListView(ListView):
+    model = Post
+    template_name = 'Alteryx.html'
+    context_object_name = 'posts'
+    paginate_by = 5
+
+    def get_queryset(self):
+        return Post.objects.filter(category_id=6).order_by('-date_posted')
 
 
 class UserPostListView(ListView):
