@@ -10,7 +10,7 @@
                         <a class="mr-2" href="{% url 'user-post' post.author.username %}">{{ post.author }}</a>
                         <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
                     </div>
-                    <h2><a class="article-title" href="{% url 'posts-detail' post.id %}">{{ post.title }} {{post.category_id}}</a></h2>
+                    <h2><a class="article-title" href="{% url 'posts-detail' post.id %}">{{ post.title }}</a></h2>
                     <p class="article-content">{{ post.content }}</p>
                     <a href="{% url 'posts-detail' pk=post.pk %}"><i style='font-size:24px; color:#ab8d3f' class='far'>&#xf075;</i> {{ post.comments.count }}</a>
                 </div>
