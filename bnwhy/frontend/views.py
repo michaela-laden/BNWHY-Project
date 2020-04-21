@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-from bnwhy.api.models import Post, Comment
+from bnwhy.api.models import Post, Comment, Category
 from django.template import loader
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.models import User
@@ -16,6 +16,10 @@ class PostListView(ListView):
     context_object_name = 'posts'
     ordering = ['-date_posted']
     paginate_by = 5
+
+    # def get_queryset(self):
+    #     return Post.objects.filter(category_id=self.kwargs.get('name')).order_by('-date_posted')
+
 
 class UserPostListView(ListView):
     model = Post
@@ -34,7 +38,7 @@ class PostDetailView(DetailView):
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
     template_name ='posts_form.html'
-    fields = ['title', 'content']
+    fields = ['title', 'category','content']
 
     def form_valid(self, form):
         form.instance.author = self.request.user
