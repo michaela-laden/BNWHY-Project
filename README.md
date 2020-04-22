@@ -6,4 +6,4 @@ The main benefit to this rather than just asking an individual on the team a que
 
 ## Live site coming soon!
 
-![Home Page](/BNWHY_Pic.PNG) 
+![Home Page](BNWHY_Pic.PNG) 
