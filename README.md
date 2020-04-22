@@ -3,3 +3,7 @@ A private Q&amp;A forum whose main purpose is to be a place for my team at BNYM 
 
 # Benefits
 The main benefit to this rather than just asking an individual on the team a question is that all the questions and answers will be available for the team acting as a great resource to use incase a burning question has been asked already! This is great for all new and old and will potentially save a lot of time if used as intended. 
+
+## Live site coming soon!
+
+![Home Page](/BNWHY_Pic.PNG) 
