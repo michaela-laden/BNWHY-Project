@@ -6,6 +6,4 @@ The main benefit to this rather than just asking an individual on the team a que
 
 ## Live site coming soon!
  
-<img src="BNWHY_Pic.PNG"
-     alt="Home Page"
-     style="float: left; margin-right: 10px;" />
+
