@@ -21,7 +21,7 @@ class AlteryxListView(ListView):
 
 class SQLListView(ListView):
     model = Post
-    template_name = 'Alteryx.html'
+    template_name = 'SQL.html'
     context_object_name = 'posts'
     paginate_by = 5
 
@@ -30,7 +30,7 @@ class SQLListView(ListView):
 
 class ShareListView(ListView):
     model = Post
-    template_name = 'Alteryx.html'
+    template_name = 'Sharepoint.html'
     context_object_name = 'posts'
     paginate_by = 5
 
@@ -39,7 +39,7 @@ class ShareListView(ListView):
 
 class PythonListView(ListView):
     model = Post
-    template_name = 'Alteryx.html'
+    template_name = 'python.html'
     context_object_name = 'posts'
     paginate_by = 5
 
@@ -49,7 +49,7 @@ class PythonListView(ListView):
 
 class OCRListView(ListView):
     model = Post
-    template_name = 'Alteryx.html'
+    template_name = 'OCR.html'
     context_object_name = 'posts'
     paginate_by = 5
 
@@ -58,7 +58,7 @@ class OCRListView(ListView):
 
 class BlueListView(ListView):
     model = Post
-    template_name = 'Alteryx.html'
+    template_name = 'Blue.html'
     context_object_name = 'posts'
     paginate_by = 5
 
